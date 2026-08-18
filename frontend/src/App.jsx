@@ -43,7 +43,7 @@ export default function App() {
     <div className="app">
       <header className="app__header">
         <span className="app__eyebrow">S3 · REACT · NODE</span>
-        <h1 className="app__title">Contact Sheet</h1>
+        <h1 className="app__title">My Gallery</h1>
         <p className="app__subtitle">
           A minimal gallery backed by presigned S3 uploads.
         </p>

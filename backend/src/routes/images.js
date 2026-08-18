@@ -98,9 +98,9 @@ router.get("/images", async (_req, res) => {
  * DELETE /api/images/:key
  * :key is URL-encoded since it contains the "uploads/" prefix and slashes.
  */
-router.delete("/images/:key", async (req, res) => {
+router.delete("/images/*", async (req, res) => {
   try {
-    const key = decodeURIComponent(req.params.key);
+    const key = req.params[0];
 
     if (!key.startsWith(PREFIX)) {
       return res.status(400).json({ error: "Invalid key" });

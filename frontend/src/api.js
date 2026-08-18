@@ -1,4 +1,4 @@
-const BASE = "/api";
+const BASE = "https://4vakph5q07.execute-api.ap-south-1.amazonaws.com/api";
 
 async function handle(res) {
   if (!res.ok) {
@@ -46,7 +46,7 @@ export async function uploadToS3(uploadUrl, file, onProgress) {
 }
 
 export async function deleteImage(key) {
-  const res = await fetch(`${BASE}/images/${encodeURIComponent(key)}`, {
+  const res = await fetch(`${BASE}/images/${key}`, {
     method: "DELETE",
   });
   return handle(res);

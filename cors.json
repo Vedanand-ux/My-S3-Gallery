@@ -1,7 +1,10 @@
 {
   "CORSRules": [
     {
-      "AllowedOrigins": ["http://localhost:5173"],
+      "AllowedOrigins": [
+        "http://localhost:5173",
+        "http://my-gallery-frontend-2003.s3-website.ap-south-1.amazonaws.com"
+      ],
       "AllowedMethods": ["GET", "PUT"],
       "AllowedHeaders": ["*"],
       "ExposeHeaders": ["ETag"],
