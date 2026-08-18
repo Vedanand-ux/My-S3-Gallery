@@ -1,29 +1,21 @@
-# Contact Sheet — S3 Photo Gallery
+My S3 Gallery
 
-A small full-stack project demonstrating React (frontend), Node.js/Express
+A small full stack project demonstrating React (frontend), Node.js/Express
 (backend API), and AWS S3 (storage) working together. Uploads go directly
 from the browser to S3 using short-lived presigned URLs — the Node server
 never touches the file bytes.
 
-```
-┌─────────────┐   1. request upload URL   ┌─────────────┐
-│   React     │ ─────────────────────────►│   Node.js    │
-│  (Vite)     │◄───────────────────────── │   Express    │
-└──────┬──────┘   2. presigned URL back    └──────┬───────┘
-       │ 3. PUT file directly                      │ signs URLs with
-       ▼                                            │ IAM credentials
-┌──────────────────────────────────────────────────▼──┐
-│                      AWS S3 bucket                    │
-└────────────────────────────────────────────────────────┘
-```
+<img width="1065" height="477" alt="image" src="https://github.com/user-attachments/assets/c105ccb5-e63c-4488-bdec-86cc0435ebc1" />
+
 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js
+- React.js
 - An AWS account
 - AWS CLI v2 installed locally
 
-## 1. Set up your AWS account (one-time, Console)
+1. Set up your AWS account (one-time, Console)
 
 1. Create an account at aws.amazon.com if you don't have one.
 2. Sign in as root → go to **IAM** → **Users** → **Create user**.
@@ -34,7 +26,7 @@ never touches the file bytes.
    choose **Command Line Interface (CLI)**. Save the Access Key ID and
    Secret Access Key.
 
-## 2. Install & configure the AWS CLI (on your machine)
+2. Install & configure the AWS CLI (on your machine)
 
 macOS:
 ```bash
